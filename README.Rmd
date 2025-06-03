@@ -111,7 +111,7 @@ github.base <- unlist(x = strsplit(x = github.url, split = "/"))
 github.base <- paste(rev(x = rev(x = github.base)[1:2]), collapse = "/")
 cat(
   "```r",
-  "if (!requireNamespace('remotes', quietly = TRUE) {",
+  "if (!requireNamespace('remotes', quietly = TRUE)) {",
   "  install.packages('remotes')",
   "}",
   paste0("remotes::install_github('satijalab/azimuth', ref = 'master')"),
